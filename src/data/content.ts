@@ -157,6 +157,15 @@ export const projects: Project[] = [
 
 export const experience = [
   {
+    role: "Data Analyst Intern",
+    org: "Fudge Consulting · Lahore, Pakistan",
+    period: "Jun 2026 – Jul 2026",
+    bullets: [
+      "Analyzed datasets to track key performance metrics and academic counseling outcomes, supporting data-driven decision-making.",
+      "Built Excel and Power BI dashboards to transform raw operational data into actionable insights, alongside quantitative research and data cleaning to support strategic reporting.",
+    ],
+  },
+  {
     role: "Social Work Intern",
     org: "The Buraaq Association · Karachi, Sindh, Pakistan",
     period: "Feb 2026 – Jun 2026",
