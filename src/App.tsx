@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
@@ -24,6 +25,8 @@ export default function App() {
         <Skills />
         <Contact />
       </main>
+
+      <SpeedInsights />
     </div>
   );
 }
