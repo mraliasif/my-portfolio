@@ -22,7 +22,7 @@ export default function Stats() {
             hidden: {},
             show: { transition: { staggerChildren: 0.1 } },
           }}
-          className="glass grid grid-cols-2 gap-px overflow-hidden rounded-3xl sm:grid-cols-3 lg:grid-cols-5"
+          className="glass grid grid-cols-2 gap-px overflow-hidden rounded-3xl sm:grid-cols-2 lg:grid-cols-4"
         >
           {stats.map((stat) => (
             <motion.div

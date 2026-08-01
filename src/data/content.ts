@@ -60,7 +60,6 @@ export interface Stat {
 export const stats: Stat[] = [
   { value: 4, suffix: "x", label: "Valuation Methods" },
   { value: 30, suffix: "+", label: "Page Research Reports" },
-  { value: 5, label: "M&A Scenarios Built" },
   { value: 29, label: "ESG Indicators Scored" },
   { value: 600, suffix: "+", label: "Event Attendees Managed" },
 ];

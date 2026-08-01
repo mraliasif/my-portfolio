@@ -327,8 +327,10 @@
     transition: opacity 0.5s ease;
     pointer-events: none;
   }
-  .nav-pill.is-scrolled::before {
-    opacity: 1;
+  @media (min-width: 768px) {
+    .nav-pill.is-scrolled::before {
+      opacity: 1;
+    }
   }
 
   /* hero: drifting dotted grid */

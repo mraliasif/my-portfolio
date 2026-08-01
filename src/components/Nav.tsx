@@ -24,7 +24,7 @@ export default function Nav() {
       <nav
         className={`nav-pill relative flex w-full items-center justify-center px-10 py-2.5 transition-all duration-500 ease-out md:w-fit ${
           scrolled
-            ? "is-scrolled rounded-full border border-transparent bg-[#0A0A14]/75 shadow-[0_10px_44px_-12px_rgba(139,92,246,0.4)] backdrop-blur-xl"
+            ? "is-scrolled rounded-full border border-transparent md:bg-[#0A0A14]/75 md:shadow-[0_10px_44px_-12px_rgba(139,92,246,0.4)] md:backdrop-blur-xl"
             : "rounded-full border border-transparent bg-transparent"
         }`}
       >
