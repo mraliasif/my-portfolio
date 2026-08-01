@@ -31,7 +31,7 @@ export const education = {
   degree: "B.S. Accounting & Finance",
   designation: "CFA Level 1 Candidate",
   period: "Aug 2023 – May 2027",
-  graduation: "Expected graduation · Feb 2027",
+  graduation: "Expected graduation · May 2027",
   coursework: [
     "Financial Modelling",
     "Mergers & Acquisitions",
