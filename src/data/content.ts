@@ -157,6 +157,15 @@ export const projects: Project[] = [
 
 export const experience = [
   {
+    role: "Social Work Intern",
+    org: "The Buraaq Association · Karachi, Sindh, Pakistan",
+    period: "Feb 2026 – Jun 2026",
+    bullets: [
+      "Engaged participants and drove attendee involvement as part of the organizing team, supporting event execution and cross-functional coordination.",
+      "Co-organized a community donation drive, collecting clothing and blood contributions and coordinating distribution to underprivileged communities.",
+    ],
+  },
+  {
     role: "Freelance Product Analyst",
     org: "FullGripEcom · Karachi, Pakistan",
     period: "Nov 2025 – Feb 2026",
