@@ -26,14 +26,14 @@ class RootErrorBoundary extends React.Component<
   render() {
     if (this.state.hasError) {
       return (
-        <div className="flex min-h-screen items-center justify-center bg-[#05050A] p-6 text-white">
+        <div className="flex min-h-screen items-center justify-center bg-[#FDF6E3] p-6 text-[#0A0A0A]">
           <div className="max-w-lg text-center">
             <p className="text-sm font-semibold">Preview runtime error</p>
-            <p className="mt-2 break-words text-xs text-white/50">
+            <p className="mt-2 break-words text-xs text-[#0A0A0A]/50">
               {this.state.message}
             </p>
             {this.state.stack && (
-              <pre className="mt-3 max-h-40 overflow-auto rounded border border-white/10 p-2 text-left text-[10px] leading-4 text-white/40">
+              <pre className="mt-3 max-h-40 overflow-auto rounded-lg border-2 border-[#0A0A0A] p-2 text-left text-[10px] leading-4 text-[#0A0A0A]/40">
                 {this.state.stack}
               </pre>
             )}

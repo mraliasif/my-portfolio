@@ -15,15 +15,15 @@ export default function Projects() {
       <svg width="0" height="0" className="absolute" aria-hidden="true" focusable="false">
         <defs>
           <linearGradient id="arrow-grad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#60a5fa" />
-            <stop offset="45%" stopColor="#a78bfa" />
-            <stop offset="100%" stopColor="#f472b6" />
+            <stop offset="0%" stopColor="#ffde00" />
+            <stop offset="50%" stopColor="#a3e635" />
+            <stop offset="100%" stopColor="#ff6b35" />
           </linearGradient>
         </defs>
       </svg>
       <div className="dot-field-soft" aria-hidden />
       <div
-        className="pointer-events-none absolute right-0 top-1/4 h-[380px] w-[380px] rounded-full bg-blue-600/10 blur-[130px]"
+        className="pointer-events-none absolute right-0 top-1/4 h-[280px] w-[280px] rounded-full border-2 border-[#0A0A0A] bg-lime-200"
         aria-hidden
       />
       <div className="relative mx-auto max-w-6xl px-6 sm:px-10">
@@ -33,7 +33,7 @@ export default function Projects() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <p className="font-mono text-xs tracking-[0.3em] text-violet-400">
+          <p className="font-mono text-xs font-bold tracking-[0.3em] text-orange-600">
             02 — Research &amp; Projects
           </p>
           <h2 className="mt-4 max-w-2xl font-display text-4xl font-bold tracking-tight sm:text-5xl">
@@ -50,27 +50,27 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: index * 0.12, ease: "easeOut" }}
-              className="tilt glass group flex flex-col rounded-3xl p-7 sm:p-8"
+              className="tilt glass group flex flex-col rounded-xl p-7 sm:p-8"
             >
               <div className="flex items-center justify-between gap-3">
                 <span className="chip">{project.tag}</span>
                 {project.grade && (
-                  <span className="font-mono text-xs font-semibold text-amber-300">
+                  <span className="font-mono text-xs font-bold text-orange-600">
                     {project.grade}
                   </span>
                 )}
               </div>
 
-              <h3 className="mt-6 font-display text-2xl font-bold text-white">
+              <h3 className="mt-6 font-display text-2xl font-bold text-[#0A0A0A]">
                 {project.title}
               </h3>
               {project.company && (
-                <p className="mt-1.5 text-sm font-medium text-violet-300/80">
+                <p className="mt-1.5 text-sm font-bold text-orange-600">
                   {project.company}
                 </p>
               )}
 
-              <p className="mt-4 text-sm leading-relaxed text-white/55">
+              <p className="mt-4 text-sm font-medium leading-relaxed text-[#0A0A0A]/55">
                 {project.summary}
               </p>
 
@@ -79,12 +79,12 @@ export default function Projects() {
                   {project.metrics.map((metric) => (
                     <div
                       key={metric.label}
-                      className="rounded-xl border border-white/10 bg-white/[0.04] px-2.5 py-2.5 text-center"
+                      className="rounded-lg border-2 border-[#0A0A0A] bg-white px-2.5 py-2.5 text-center shadow-[2px_2px_0_0_#0A0A0A]"
                     >
-                      <div className="font-display text-lg font-bold text-white">
+                      <div className="font-display text-lg font-bold text-[#0A0A0A]">
                         {metric.value}
                       </div>
-                      <div className="mt-0.5 text-[10px] font-medium uppercase tracking-wide text-white/45">
+                      <div className="mt-0.5 text-[10px] font-bold uppercase tracking-wide text-[#0A0A0A]/45">
                         {metric.label}
                       </div>
                     </div>
@@ -97,9 +97,9 @@ export default function Projects() {
                   {project.bullets.map((bullet) => (
                     <li
                       key={bullet}
-                      className="flex items-start gap-2.5 text-sm text-white/65"
+                      className="flex items-start gap-2.5 text-sm font-medium text-[#0A0A0A]/65"
                     >
-                      <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-blue-400 to-pink-400" />
+                      <span className="mt-[7px] h-2 w-2 shrink-0 rotate-45 bg-orange-500" />
                       {bullet}
                     </li>
                   ))}

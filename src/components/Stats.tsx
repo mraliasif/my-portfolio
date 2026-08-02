@@ -22,7 +22,7 @@ export default function Stats() {
             hidden: {},
             show: { transition: { staggerChildren: 0.1 } },
           }}
-          className="glass grid grid-cols-2 gap-px overflow-hidden rounded-3xl sm:grid-cols-2 lg:grid-cols-4"
+          className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-4"
         >
           {stats.map((stat) => (
             <motion.div
@@ -35,9 +35,9 @@ export default function Stats() {
                   transition: { duration: 0.6, ease: "easeOut" },
                 },
               }}
-              className="flex flex-col items-center gap-2 bg-[#0B0B16]/60 px-4 py-8 text-center"
+              className="flex flex-col items-center gap-2 rounded-xl border-2 border-[#0A0A0A] bg-white px-4 py-8 text-center shadow-[5px_5px_0_0_#0A0A0A]"
             >
-              <dd className="font-mono text-3xl font-semibold text-amber-400 sm:text-4xl">
+              <dd className="font-mono text-3xl font-bold text-[#0A0A0A] sm:text-4xl">
                 <CountUp
                   value={stat.value}
                   prefix={stat.prefix}
@@ -45,7 +45,7 @@ export default function Stats() {
                   decimals={stat.decimals ?? 0}
                 />
               </dd>
-              <dt className="text-xs leading-snug text-white/50">{stat.label}</dt>
+              <dt className="text-xs font-semibold leading-snug text-[#0A0A0A]/70">{stat.label}</dt>
             </motion.div>
           ))}
         </motion.dl>

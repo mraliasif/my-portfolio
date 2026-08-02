@@ -14,7 +14,7 @@ export default function Experience() {
     >
       <div className="dot-field-soft" aria-hidden />
       <div
-        className="pointer-events-none absolute -left-20 bottom-0 h-[340px] w-[340px] rounded-full bg-violet-600/10 blur-[130px]"
+        className="pointer-events-none absolute -left-20 bottom-0 h-[280px] w-[280px] rounded-full border-2 border-[#0A0A0A] bg-lime-200"
         aria-hidden
       />
       <div className="relative mx-auto max-w-6xl px-6 sm:px-10">
@@ -24,7 +24,7 @@ export default function Experience() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <p className="font-mono text-xs tracking-[0.3em] text-violet-400">
+          <p className="font-mono text-xs font-bold tracking-[0.3em] text-orange-600">
             03 — Experience
           </p>
           <h2 className="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl">
@@ -43,34 +43,34 @@ export default function Experience() {
               className="relative flex gap-5 pb-10 last:pb-0 sm:gap-7"
             >
               <div className="relative flex flex-col items-center">
-                <span className="z-10 grid h-11 w-11 shrink-0 place-items-center rounded-full border border-white/10 bg-[#0B0B16] text-violet-300 shadow-lg shadow-violet-500/20">
+                <span className="z-10 grid h-11 w-11 shrink-0 place-items-center rounded-lg border-2 border-[#0A0A0A] bg-yellow-300 text-[#0A0A0A] shadow-[3px_3px_0_0_#0A0A0A]">
                   <Briefcase className="h-4 w-4" />
                 </span>
                 {index < experience.length - 1 && (
                   <span
-                    className="absolute top-11 h-full w-px bg-gradient-to-b from-violet-500/50 to-transparent"
+                    className="absolute top-11 h-full w-[3px] bg-[#0A0A0A]/25"
                     aria-hidden
                   />
                 )}
               </div>
 
-              <div className="glass flex-1 rounded-2xl p-6 sm:p-7">
+              <div className="glass flex-1 rounded-xl p-6 sm:p-7">
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
-                  <h3 className="font-display text-lg font-semibold text-white">
+                  <h3 className="font-display text-lg font-bold text-[#0A0A0A]">
                     {entry.role}
                   </h3>
-                  <span className="font-mono text-xs text-amber-300">
+                  <span className="font-mono text-xs font-bold text-orange-600">
                     {entry.period}
                   </span>
                 </div>
-                <p className="mt-0.5 text-sm text-violet-300/80">{entry.org}</p>
+                <p className="mt-0.5 text-sm font-bold text-orange-600">{entry.org}</p>
                 <ul className="mt-4 space-y-2">
                   {entry.bullets.map((bullet) => (
                     <li
                       key={bullet}
-                      className="flex items-start gap-2.5 text-sm text-white/60"
+                      className="flex items-start gap-2.5 text-sm font-medium text-[#0A0A0A]/60"
                     >
-                      <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400/70" />
+                      <span className="mt-[7px] h-2 w-2 shrink-0 rotate-45 bg-lime-500" />
                       {bullet}
                     </li>
                   ))}

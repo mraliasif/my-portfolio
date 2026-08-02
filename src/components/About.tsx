@@ -24,7 +24,7 @@ export default function About() {
     >
       <div className="dot-field-soft" aria-hidden />
       <div
-        className="pointer-events-none absolute left-1/2 top-0 h-[300px] w-[600px] -translate-x-1/2 rounded-full bg-violet-600/10 blur-[130px]"
+        className="pointer-events-none absolute left-1/2 top-0 h-[300px] w-[520px] -translate-x-1/2 rounded-full border-2 border-[#0A0A0A] bg-yellow-200"
         aria-hidden
       />
       <div className="relative mx-auto max-w-6xl px-6 sm:px-10">
@@ -37,7 +37,7 @@ export default function About() {
           >
             <motion.p
               variants={fadeUp}
-              className="font-mono text-xs tracking-[0.3em] text-violet-400"
+              className="font-mono text-xs font-bold tracking-[0.3em] text-orange-600"
             >
               01 — About &amp; Education
             </motion.p>
@@ -50,7 +50,7 @@ export default function About() {
             </motion.h2>
             <motion.p
               variants={fadeUp}
-              className="mt-6 leading-relaxed text-white/60"
+              className="mt-6 leading-relaxed font-medium text-[#0A0A0A]/60"
             >
               Accounting &amp; finance student at IBA Karachi, charting a path
               into equity research through the CFA program — coursework in
@@ -64,29 +64,29 @@ export default function About() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-80px" }}
-            className="glass rounded-3xl p-7 sm:p-9"
+            className="glass rounded-xl p-7 sm:p-9"
           >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="font-display text-xl font-semibold text-white">
+                <p className="font-display text-xl font-bold text-[#0A0A0A]">
                   {education.school}
                 </p>
-                <p className="mt-1 text-white/60">{education.degree}</p>
+                <p className="mt-1 font-medium text-[#0A0A0A]/60">{education.degree}</p>
               </div>
-              <span className="shrink-0 rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1.5 font-mono text-[11px] font-semibold tracking-wider text-amber-300">
+              <span className="shrink-0 rounded-lg border-2 border-[#0A0A0A] bg-orange-300 px-3 py-1.5 font-mono text-[11px] font-bold tracking-wider text-[#0A0A0A] shadow-[2px_2px_0_0_#0A0A0A]">
                 {education.designation}
               </span>
             </div>
 
-            <div className="mt-6 flex items-center gap-2 font-mono text-sm text-amber-300/90">
+            <div className="mt-6 flex items-center gap-2 font-mono text-sm font-bold text-orange-600">
               <GraduationCap className="h-4 w-4" />
               {education.period}
             </div>
-            <p className="mt-1 font-mono text-xs text-white/40">
+            <p className="mt-1 font-mono text-xs font-medium text-[#0A0A0A]/40">
               {education.graduation}
             </p>
 
-            <p className="mt-8 font-mono text-[11px] tracking-[0.25em] text-white/40">
+            <p className="mt-8 font-mono text-[11px] font-bold tracking-[0.25em] text-[#0A0A0A]/40">
               COURSEWORK
             </p>
             <div className="mt-3 flex flex-wrap gap-2">
@@ -97,16 +97,16 @@ export default function About() {
               ))}
             </div>
 
-            <p className="mt-8 font-mono text-[11px] tracking-[0.25em] text-white/40">
+            <p className="mt-8 font-mono text-[11px] font-bold tracking-[0.25em] text-[#0A0A0A]/40">
               ACTIVITIES
             </p>
             <ul className="mt-3 space-y-3">
               {education.activities.map((activity) => (
                 <li
                   key={activity}
-                  className="flex items-start gap-3 text-sm text-white/70"
+                  className="flex items-start gap-3 text-sm font-medium text-[#0A0A0A]/70"
                 >
-                  <Medal className="mt-0.5 h-4 w-4 shrink-0 text-violet-400" />
+                  <Medal className="mt-0.5 h-4 w-4 shrink-0 text-orange-500" />
                   {activity}
                 </li>
               ))}

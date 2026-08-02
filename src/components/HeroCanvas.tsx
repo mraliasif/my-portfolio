@@ -51,13 +51,13 @@ function DistortedSphere({ pointer }: { pointer: { x: number; y: number } }) {
   return (
     <Float speed={1.4} rotationIntensity={0.35} floatIntensity={0.9}>
       <mesh ref={mesh}>
-        <sphereGeometry args={[1.35, 64, 64]} />
+        <sphereGeometry args={[1.2, 64, 64]} />
         <MeshDistortMaterial
-          color="#241b4d"
-          emissive="#6d28d9"
-          emissiveIntensity={0.55}
-          roughness={0.12}
-          metalness={0.85}
+          color="#ffde00"
+          emissive="#ff6b35"
+          emissiveIntensity={0.45}
+          roughness={0.35}
+          metalness={0.15}
           distort={0.38}
           speed={1.8}
         />
@@ -96,9 +96,9 @@ function ParticleField({ count = 500 }: { count?: number }) {
       </bufferGeometry>
       <pointsMaterial
         size={0.035}
-        color="#a78bfa"
+        color="#0a0a0a"
         transparent
-        opacity={0.6}
+        opacity={0.55}
         sizeAttenuation
         depthWrite={false}
         blending={THREE.AdditiveBlending}
@@ -124,10 +124,10 @@ function Scene() {
   return (
     <>
       <ambientLight intensity={0.4} />
-      <pointLight position={[6, 5, 6]} intensity={70} color="#3b82f6" />
-      <pointLight position={[-6, -3, 5]} intensity={55} color="#ec4899" />
-      <pointLight position={[0, -6, -4]} intensity={40} color="#8b5cf6" />
-      <group position={[0, 0, 0]}>
+      <pointLight position={[6, 5, 6]} intensity={70} color="#ffde00" />
+      <pointLight position={[-6, -3, 5]} intensity={55} color="#ff6b35" />
+      <pointLight position={[0, -6, -4]} intensity={40} color="#a3e635" />
+      <group position={[1.9, 0.15, 0]}>
         <DistortedSphere pointer={pointer} />
         <ParticleField />
       </group>

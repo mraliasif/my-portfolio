@@ -10,15 +10,16 @@ export default function Contact() {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.7, ease: "easeOut" }}
-      className="relative scroll-mt-28 overflow-hidden pt-28 pb-8 sm:pt-36 sm:pb-8"
+      className="relative scroll-mt-28 overflow-hidden pt-28 pb-4 sm:pt-36 sm:pb-4"
     >
       <div className="dot-field-soft" aria-hidden />
-      <div
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[460px] w-[720px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-600/15 blur-[150px]"
-        aria-hidden
-      />
 
-      <div className="relative mx-auto max-w-4xl px-6 text-center sm:px-10">
+      <div className="relative mx-auto max-w-2xl px-6 text-center sm:px-10">
+        {/* cream circle — centered on the contact content, above the footer */}
+        <div
+          className="pointer-events-none absolute left-1/2 top-1/2 h-[440px] w-[min(760px,94vw)] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#0A0A0A] bg-yellow-200 sm:h-[480px] sm:w-[820px]"
+          aria-hidden
+        />
         <motion.div
           initial="hidden"
           whileInView="show"
@@ -27,13 +28,14 @@ export default function Contact() {
             hidden: {},
             show: { transition: { staggerChildren: 0.12 } },
           }}
+          className="relative z-10"
         >
           <motion.p
             variants={{
               hidden: { opacity: 0, y: 20 },
               show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
             }}
-            className="font-mono text-xs tracking-[0.3em] text-violet-400"
+            className="font-mono text-xs font-bold tracking-[0.3em] text-orange-600"
           >
             05 — Contact
           </motion.p>
@@ -51,7 +53,7 @@ export default function Contact() {
               hidden: { opacity: 0, y: 24 },
               show: { opacity: 1, y: 0, transition: { duration: 0.7 } },
             }}
-            className="mx-auto mt-6 max-w-xl text-white/60"
+            className="mx-auto mt-6 max-w-xl font-medium text-[#0A0A0A]/60"
           >
             Open to equity research, finance and modelling conversations —
             reach out any time.
@@ -79,14 +81,14 @@ export default function Contact() {
         </motion.div>
       </div>
 
-      <footer className="relative z-[1] mt-24 flex flex-wrap items-center justify-center gap-3 border-t border-white/5 px-[clamp(20px,7vw,100px)] py-7">
-        <p className="text-xs font-medium text-white/45">
-          © 2026{" "}            <span className="text-gradient font-semibold">Muhammad Ali Raza</span>
+      <footer className="relative z-[1] mt-36 flex flex-wrap items-center justify-center gap-3 border-t-2 border-[#0A0A0A] px-[clamp(30px,8vw,20px)] pt-6 pb-1">
+        <p className="text-xs font-semibold text-[#0A0A0A]/45">
+          © 2026{" "}            <span className="text-gradient font-bold">Muhammad Ali Raza</span>
           </p>
-          <span className="text-white/30" aria-hidden>
+          <span className="text-[#0A0A0A]/30" aria-hidden>
             |
           </span>
-          <p className="text-xs font-medium text-white/45">
+          <p className="text-xs font-semibold text-[#0A0A0A]/45">
             IBA Karachi · CFA Candidate · PSX Research
           </p>
       </footer>

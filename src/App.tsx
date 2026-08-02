@@ -10,10 +10,7 @@ import Stats from "./components/Stats";
 
 export default function App() {
   return (
-    <div className="relative min-h-screen bg-[#05050A] text-white">
-      {/* film grain overlay */}
-      <div className="grain pointer-events-none fixed inset-0 z-40" aria-hidden />
-
+    <div className="relative min-h-screen bg-[#FDF6E3] text-[#0A0A0A]">
       <Nav />
 
       <main>
