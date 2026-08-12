@@ -201,15 +201,6 @@ export const experience = [
       "Delivered 3 written project briefs covering education access, poverty alleviation, and environmental sustainability.",
     ],
   },
-  {
-    role: "Trainee Data Analyst",
-    org: "Fudge Consulting · Remote, Pakistan",
-    period: "Jun 2022 – Aug 2024",
-    bullets: [
-      "Automated data cleaning and processing for 5 recurring client reports in the education sector using Python (pandas) and Excel, cutting turnaround time by 25% from 8 to 6 hours per cycle and removing recurring data quality errors.",
-      "Built 3 Tableau KPI dashboards tracking revenue and sales performance for 5 clients across 3 sectors.",
-    ],
-  },
 ];
 
 export const skillGroups = [
