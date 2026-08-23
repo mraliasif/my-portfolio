@@ -1,5 +1,5 @@
 import { motion, type Variants } from "framer-motion";
-import { ChevronDown, Download, Mail } from "lucide-react";
+import { ArrowUpRight, ChevronDown, Download, LineChart } from "lucide-react";
 import { profile } from "../data/content";
 import HeroCanvas from "./HeroCanvas";
 
@@ -93,9 +93,15 @@ export default function Hero() {
           variants={item}
           className="mt-10 flex flex-wrap items-center justify-center gap-3"
         >
-          <a href={`mailto:${profile.email}`} className="pill-primary px-8!">
-            <Mail className="h-4 w-4" />
-            Email
+          <a
+            href="https://psx-indicators.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="pill-primary px-8!"
+          >
+            <LineChart className="h-4 w-4" />
+            PSX Indicators
+            <ArrowUpRight className="h-4 w-4" />
           </a>
           <a
             href={profile.resumeHref}

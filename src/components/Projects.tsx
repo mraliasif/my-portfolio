@@ -50,61 +50,90 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: index * 0.12, ease: "easeOut" }}
-              className="tilt glass group flex flex-col rounded-xl p-7 sm:p-8"
+              className={`tilt glass group flex flex-col rounded-xl p-7 sm:p-8 ${
+                project.wide ? "md:col-span-2 md:p-10" : ""
+              }`}
             >
               <div className="flex items-center justify-between gap-3">
                 <span className="chip">{project.tag}</span>
-                {project.grade && (
-                  <span className="font-mono text-xs font-bold text-orange-600">
-                    {project.grade}
-                  </span>
-                )}
+                <span className="flex items-center gap-3">
+                  {project.wide && (
+                    <span className="inline-flex items-center gap-1.5 rounded-full border-2 border-[#0A0A0A] bg-white px-3 py-1 shadow-[2px_2px_0_0_#0A0A0A]">
+                      <span className="relative flex h-2 w-2">
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-lime-500 opacity-75" />
+                        <span className="relative inline-flex h-2 w-2 rounded-full bg-lime-500" />
+                      </span>
+                      <span className="text-[10px] font-bold uppercase tracking-wide text-[#0A0A0A]">
+                        Live
+                      </span>
+                    </span>
+                  )}
+                  {project.grade && (
+                    <span className="font-mono text-xs font-bold text-orange-600">
+                      {project.grade}
+                    </span>
+                  )}
+                </span>
               </div>
 
-              <h3 className="mt-6 font-display text-2xl font-bold text-[#0A0A0A]">
-                {project.title}
-              </h3>
-              {project.company && (
-                <p className="mt-1.5 text-sm font-bold text-orange-600">
-                  {project.company}
-                </p>
-              )}
+              <div
+                className={
+                  project.wide
+                    ? "flex-1 md:grid md:grid-cols-2 md:gap-x-12"
+                    : "flex-1"
+                }
+              >
+                <div>
+                  <h3 className="mt-6 font-display text-2xl font-bold text-[#0A0A0A]">
+                    {project.title}
+                  </h3>
+                  {project.company && (
+                    <p className="mt-1.5 text-sm font-bold text-orange-600">
+                      {project.company}
+                    </p>
+                  )}
 
-              <p className="mt-4 text-sm font-medium leading-relaxed text-[#0A0A0A]/55">
-                {project.summary}
-              </p>
+                  <p className="mt-4 text-sm font-medium leading-relaxed text-[#0A0A0A]/55">
+                    {project.summary}
+                  </p>
 
-              {project.metrics && project.metrics.length > 0 && (
-                <div className="mt-5 grid grid-cols-3 gap-3">
-                  {project.metrics.map((metric) => (
-                    <div
-                      key={metric.label}
-                      className="rounded-lg border-2 border-[#0A0A0A] bg-white px-2.5 py-2.5 text-center shadow-[2px_2px_0_0_#0A0A0A]"
-                    >
-                      <div className="font-display text-lg font-bold text-[#0A0A0A]">
-                        {metric.value}
-                      </div>
-                      <div className="mt-0.5 text-[10px] font-bold uppercase tracking-wide text-[#0A0A0A]/45">
-                        {metric.label}
-                      </div>
+                  {project.metrics && project.metrics.length > 0 && (
+                    <div className="mt-5 grid grid-cols-3 gap-3">
+                      {project.metrics.map((metric) => (
+                        <div
+                          key={metric.label}
+                          className="rounded-lg border-2 border-[#0A0A0A] bg-white px-2.5 py-2.5 text-center shadow-[2px_2px_0_0_#0A0A0A]"
+                        >
+                          <div className="font-display text-lg font-bold text-[#0A0A0A]">
+                            {metric.value}
+                          </div>
+                          <div className="mt-0.5 text-[10px] font-bold uppercase tracking-wide text-[#0A0A0A]/45">
+                            {metric.label}
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  )}
                 </div>
-              )}
 
-              {project.bullets && project.bullets.length > 0 && (
-                <ul className="mt-5 space-y-2.5">
-                  {project.bullets.map((bullet) => (
-                    <li
-                      key={bullet}
-                      className="flex items-start gap-2.5 text-sm font-medium text-[#0A0A0A]/65"
-                    >
-                      <span className="mt-[7px] h-2 w-2 shrink-0 rotate-45 bg-orange-500" />
-                      {bullet}
-                    </li>
-                  ))}
-                </ul>
-              )}
+                {project.bullets && project.bullets.length > 0 && (
+                  <ul
+                    className={`space-y-2.5 ${
+                      project.wide ? "mt-6 md:mt-11" : "mt-5"
+                    }`}
+                  >
+                    {project.bullets.map((bullet) => (
+                      <li
+                        key={bullet}
+                        className="flex items-start gap-2.5 text-sm font-medium text-[#0A0A0A]/65"
+                      >
+                        <span className="mt-[7px] h-2 w-2 shrink-0 rotate-45 bg-orange-500" />
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
 
               <a
                 href={project.href}
@@ -112,7 +141,9 @@ export default function Projects() {
                 rel="noopener noreferrer"
                 className="mt-auto inline-flex items-center gap-1.5 pt-7 text-sm font-semibold transition-opacity hover:opacity-90"
               >
-                <span className="text-gradient">View case</span>
+                <span className="text-gradient">
+                  {project.wide ? "View live dashboard" : "View case"}
+                </span>
                 <ArrowUpRight
                   stroke="url(#arrow-grad)"
                   className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- hard offset shadow -->
+  <rect x="5" y="8" width="54" height="54" rx="10" fill="#0A0A0A" />
+  <!-- bold yellow tile with thick black border (neobrutalism) -->
+  <rect x="0" y="0" width="54" height="54" rx="10" fill="#FFDE00" stroke="#0A0A0A" stroke-width="3" />
+  <text x="27" y="41" font-family="'Bricolage Grotesque', Arial, Helvetica, sans-serif" font-size="25" font-weight="800" fill="#0A0A0A"
+    text-anchor="middle">AR</text>
+</svg>

@@ -78,9 +78,32 @@ export interface Project {
   bullets?: string[];
   metrics?: Metric[];
   href: string;
+  /** Renders as a full-width horizontal card. */
+  wide?: boolean;
 }
 
 export const projects: Project[] = [
+  {
+    title: "PSX Indicators",
+    tag: "Market Intelligence Dashboard",
+    summary:
+      "Built a live, dynamic market intelligence dashboard for Pakistan Stock Exchange data, macro indicators, and sector insights. No more jumping between PSX DPS, World Bank, PBS, and a dozen other tabs to gather data for valuations, case comps, or university projects — everything is in one place.",
+    bullets: [
+      "All PSX indices — KSE-100, KSE-30, KMI-30 + Shariah & sector indices",
+      "50+ macro indicators — FX, interest rates, CPI, commodities, cement, fertilizer, auto sales",
+      "Sector pages (Oil & Gas, Banks, Cement, Pharma, Textiles & more) with DCF, DDM & CAPM modelling notes",
+      "CAPM-based WACC calculator for 14 sectors, with CSV export",
+      "Compare tool to overlay any two instruments on a time-series chart",
+      "Personal watchlist + detail drawers on every instrument",
+    ],
+    metrics: [
+      { value: "50+", label: "Macro Indicators" },
+      { value: "14", label: "Sector WACC Models" },
+      { value: "10+", label: "Sectors Modeling Guide" },
+    ],
+    href: "https://psx-indicators.vercel.app",
+    wide: true,
+  },
   {
     title: "Pakistan Oilfields Limited (POL)",
     tag: "Equity Research",
