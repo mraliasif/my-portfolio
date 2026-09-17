@@ -12,7 +12,7 @@ export const profile = {
   location: "Karachi, Pakistan",
   phone: "+92-311-7023800",
   phoneHref: "tel:+923117023800",
-  email: "maliraza7023@gmail.com",
+  email: "letscontactali@gmail.com",
   linkedinHref: "https://www.linkedin.com/in/alirazaasif/",
   resumeHref: "/resume.pdf",
   resumeFileName: "Muhammad-Ali-Raza-Resume.pdf",
@@ -179,6 +179,15 @@ export const projects: Project[] = [
 ];
 
 export const experience = [
+  {
+    role: "Customer Experience Intern",
+    org: "Nafa: PSX Stock & Investing · Karachi, Pakistan",
+    period: "Sept 2026 – Present",
+    bullets: [
+      "Manage client onboarding and KYC verification processes, ensuring accurate documentation and a smooth customer experience in compliance with brokerage requirements.",
+      "Act as the primary point of contact for clients, resolving account-related issues and coordinating with brokerage partner Chase Securities to facilitate timely solutions and improve customer satisfaction.",
+    ],
+  },
   {
     role: "Data Analyst Intern",
     org: "Fudge Consulting · Lahore, Pakistan",
