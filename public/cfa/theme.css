@@ -267,6 +267,10 @@ h6 {
 
 .rlink {
   border-radius: 8px;
+  margin-bottom: 3px;
+}
+.topic .rlink:last-child {
+  margin-bottom: 0;
 }
 .rlink.on {
   background: #ffde00;
