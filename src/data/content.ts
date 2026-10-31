@@ -26,6 +26,8 @@ export const navLinks = [
   { label: "Contact", href: "#contact" },
 ];
 
+export const cfaHref = "/cfa/";
+
 export const education = {
   school: "Institute of Business Administration (IBA Karachi)",
   degree: "B.S. Accounting & Finance",
