@@ -1,0 +1,355 @@
+/* Neobrutalist theme matched to the portfolio: cream base, near-black ink,
+   hard black borders + offset shadows, loud yellow/lime/orange accents,
+   Bricolage Grotesque everywhere. Content and layout are untouched. */
+
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap");
+
+:root,
+:root[data-theme="light"],
+:root[data-theme="dark"],
+:root:not([data-theme="light"]) {
+  --bg: #fdf6e3;
+  --panel: #ffffff;
+  --panel2: #f2ead5;
+  --ink: #0a0a0a;
+  --ink2: #4a4437;
+  --ink3: #6b6455;
+  --line: #0a0a0a;
+
+  --accent: #c2410c;
+  --quant: #c2410c;
+  --econ: #4d7c0f;
+  --cf: #0369a1;
+  --b1: #c2410c;
+  --b2: #4d7c0f;
+  --b3: #0369a1;
+  --b4: #be185d;
+
+  --good: #127a4a;
+  --goodbg: #dcfce7;
+  --bad: #b42318;
+  --badbg: #fee2e2;
+  --warnbg: #fef3c7;
+  --warn: #8a5a00;
+
+  --fbg: #f2ead5;
+  --ontc: #ffffff;
+  --shadow: 5px 5px 0 0 #0a0a0a;
+
+  --serif: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --sans: "Bricolage Grotesque", ui-sans-serif, system-ui, -apple-system,
+    sans-serif;
+  --mono: "Bricolage Grotesque", ui-monospace, SFMono-Regular, Menlo, Consolas,
+    monospace;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+body {
+  background-color: var(--bg);
+  background-image: radial-gradient(
+    rgba(10, 10, 10, 0.1) 1.5px,
+    transparent 1.5px
+  );
+  background-size: 40px 40px;
+  font-family: var(--sans);
+}
+
+::selection {
+  background: #ffde00;
+  color: #0a0a0a;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #0a0a0a;
+  border: 3px solid var(--bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff6b35;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 2px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.02em;
+}
+
+/* ---------- containers: solid fill, black border, hard shadow ---------- */
+.book,
+.tocbook,
+.layer,
+.sec,
+.tcard,
+.calc,
+.quiz .qq,
+.los,
+.resume {
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.book,
+.tcard {
+  border-top: 6px solid var(--tc, var(--accent));
+}
+
+.book:hover,
+.tcard:hover {
+  transform: translate(-2px, -2px);
+  border-color: var(--line);
+  box-shadow: 7px 7px 0 0 #0a0a0a;
+}
+
+.book,
+.tcard,
+.layer,
+.chip,
+.btn,
+.iconbtn,
+.tab,
+.opt,
+.rlink,
+.calc,
+.cout,
+.expl,
+.allbooks {
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+/* ---------- smaller surfaces ---------- */
+.chip,
+.iconbtn,
+.btn,
+.search,
+.tab,
+.opt,
+.allbooks,
+.cout,
+.expl,
+.q,
+.call,
+.dir,
+.traps li,
+.f {
+  border: 2px solid var(--line);
+}
+
+.chip {
+  border-radius: 6px;
+  background: #ffffff;
+  color: #0a0a0a;
+  font-weight: 600;
+  box-shadow: 2px 2px 0 0 #0a0a0a;
+}
+.chip:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 0 #0a0a0a;
+}
+
+.iconbtn {
+  background: #ffffff;
+  color: #0a0a0a;
+  border-radius: 8px;
+  box-shadow: 2px 2px 0 0 #0a0a0a;
+}
+.iconbtn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 0 #0a0a0a;
+  border-color: var(--line);
+  color: #0a0a0a;
+}
+
+.btn {
+  background: #ffffff;
+  color: #0a0a0a;
+  border-radius: 8px;
+  box-shadow: 3px 3px 0 0 #0a0a0a;
+}
+.btn:hover {
+  transform: translate(-1px, -1px);
+  border-color: var(--line);
+  box-shadow: 4px 4px 0 0 #0a0a0a;
+}
+.btn.primary {
+  background: #ffde00;
+  border-color: var(--line);
+  color: #0a0a0a;
+}
+.btn.on {
+  background: #a3e635;
+  border-color: var(--line);
+  color: #0a0a0a;
+}
+
+.search {
+  background: #ffffff;
+  border-radius: 8px;
+}
+.search:focus {
+  outline: 2px solid #ff6b35;
+  outline-offset: 1px;
+}
+
+.tab {
+  background: #ffffff;
+  color: #0a0a0a;
+  box-shadow: 2px 2px 0 0 #0a0a0a;
+}
+.tab.on {
+  background: #ffde00;
+  border-color: var(--line);
+  color: #0a0a0a;
+  box-shadow: 3px 3px 0 0 #0a0a0a;
+}
+.tab.on b {
+  color: rgba(10, 10, 10, 0.6);
+}
+
+.opt {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 2px 2px 0 0 #0a0a0a;
+}
+.opt:hover:not([disabled]) {
+  transform: translate(-1px, -1px);
+  border-color: var(--line);
+  box-shadow: 3px 3px 0 0 #0a0a0a;
+}
+.opt.right {
+  background: var(--goodbg);
+  border-color: var(--good);
+  box-shadow: 2px 2px 0 0 var(--good);
+}
+.opt.wrong {
+  background: var(--badbg);
+  border-color: var(--bad);
+  box-shadow: 2px 2px 0 0 var(--bad);
+}
+
+.allbooks {
+  background: #ffffff;
+  color: #0a0a0a;
+}
+.allbooks:hover {
+  transform: translate(-1px, -1px);
+  color: #0a0a0a;
+  border-color: var(--line);
+  box-shadow: 2px 2px 0 0 #0a0a0a;
+}
+
+/* ---------- reading content ---------- */
+.side {
+  border-right: 2px solid var(--line);
+}
+
+.rlink {
+  border-radius: 8px;
+}
+.rlink.on {
+  background: #ffde00;
+  color: #0a0a0a;
+  box-shadow: 2px 2px 0 0 #0a0a0a;
+}
+.rlink.on .n {
+  background: #0a0a0a;
+  color: #ffde00;
+}
+
+.tabs {
+  border-bottom: 2px solid var(--line);
+}
+
+.steps > li::before {
+  background: #ffde00;
+  color: #0a0a0a;
+  border: 2px solid var(--line);
+}
+
+.summary {
+  border-left: 5px solid var(--tc, var(--accent));
+}
+
+.cout,
+.expl,
+.q,
+.call,
+.dir {
+  border-radius: 10px;
+  background: var(--panel2);
+}
+
+.traps li {
+  border-left: 5px solid var(--bad);
+  border-radius: 8px;
+}
+
+.f {
+  background: var(--fbg);
+  border-left: 5px solid var(--tc, var(--accent));
+  border-radius: 8px;
+}
+
+.prose table {
+  border: 2px solid var(--line);
+}
+.prose th {
+  background: var(--panel2);
+}
+
+.topbar {
+  border-bottom: 2px solid var(--line);
+}
+
+footer {
+  border-top: 2px solid var(--line);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .book,
+  .tcard,
+  .layer,
+  .chip,
+  .btn,
+  .iconbtn,
+  .tab,
+  .opt,
+  .rlink,
+  .calc,
+  .cout,
+  .expl,
+  .allbooks {
+    transition: none;
+  }
+  .book:hover,
+  .tcard:hover,
+  .chip:hover,
+  .btn:hover,
+  .iconbtn:hover,
+  .opt:hover:not([disabled]),
+  .allbooks:hover {
+    transform: none;
+  }
+}
