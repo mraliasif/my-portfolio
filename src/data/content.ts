@@ -182,7 +182,7 @@ export const projects: Project[] = [
 
 export const experience = [
   {
-    role: "Customer Experience Intern",
+    role: "Customer Experience Manager",
     org: "Nafa: PSX Stock & Investing · Karachi, Pakistan",
     period: "Sept 2026 – Present",
     bullets: [
