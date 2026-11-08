@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRight, Menu, X } from "lucide-react";
-import { cfaHref, navLinks } from "../data/content";
+import { Menu, X } from "lucide-react";
+import { navLinks } from "../data/content";
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -39,17 +39,6 @@ export default function Nav() {
               </a>
             </li>
           ))}
-          <li>
-            <a
-              href={cfaHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="pill-primary px-5! py-2!"
-            >
-              CFA
-              <ArrowUpRight className="h-3.5 w-3.5" />
-            </a>
-          </li>
         </ul>
 
         <button
@@ -81,16 +70,6 @@ export default function Nav() {
                 {link.label}
               </a>
             ))}
-            <a
-              href={cfaHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
-              className="pill-primary mt-2 w-full justify-center"
-            >
-              CFA
-              <ArrowUpRight className="h-4 w-4" />
-            </a>
           </motion.div>
         )}
       </AnimatePresence>

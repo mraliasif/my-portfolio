@@ -226,6 +226,32 @@
     box-shadow: 2px 2px 0 0 #0a0a0a;
   }
 
+  /* lime accent button: matches primary, distinct fill */
+  .pill-lime {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 8px;
+    border: 2px solid #0a0a0a;
+    padding: 0.7rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #0a0a0a;
+    background: #bef264;
+    box-shadow: 4px 4px 0 0 #0a0a0a;
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+  .pill-lime:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 0 #0a0a0a;
+  }
+  .pill-lime:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 0 #0a0a0a;
+  }
+
   /* ghost button: white fill, black border, hard shadow */
   .pill-ghost {
     display: inline-flex;
