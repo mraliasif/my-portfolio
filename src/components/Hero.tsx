@@ -1,6 +1,6 @@
 import { motion, type Variants } from "framer-motion";
-import { ArrowUpRight, ChevronDown, Download, GraduationCap, LineChart } from "lucide-react";
-import { cfaHref, profile } from "../data/content";
+import { ArrowUpRight, ChevronDown, Download, LineChart } from "lucide-react";
+import { profile } from "../data/content";
 import HeroCanvas from "./HeroCanvas";
 
 const container: Variants = {
@@ -91,32 +91,22 @@ export default function Hero() {
 
         <motion.div
           variants={item}
-          className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap"
+          className="mt-10 flex flex-wrap items-center justify-center gap-3"
         >
           <a
             href="https://psx-indicators.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
-            className="pill-primary w-full justify-center px-6! sm:w-auto sm:px-8!"
+            className="pill-primary px-8!"
           >
             <LineChart className="h-4 w-4" />
             PSX Indicators
             <ArrowUpRight className="h-4 w-4" />
           </a>
           <a
-            href={cfaHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="pill-lime w-full justify-center px-6! sm:w-auto sm:px-8!"
-          >
-            <GraduationCap className="h-4 w-4" />
-            CFA Study Companion
-            <ArrowUpRight className="h-4 w-4" />
-          </a>
-          <a
             href={profile.resumeHref}
             download={profile.resumeFileName}
-            className="pill-ghost w-full justify-center px-6! sm:w-auto sm:px-8!"
+            className="pill-ghost px-8!"
           >
             <Download className="h-4 w-4" />
             Resume
