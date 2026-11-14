@@ -101,7 +101,10 @@ export const projects: Project[] = [
     metrics: [
       { value: "45", label: "Macro Series" },
       { value: "KSE-100", label: "Screener Coverage" },
-      { value: "1", label: "Unified Screen" },
+      { value: "WACC", label: "Live Feeder" },
+      { value: "DCF", label: "Gordon / Exit" },
+      { value: "XLSX", label: "One-Click Reports" },
+      { value: "Email", label: "Watchlist Alerts" },
     ],
     href: "https://psx-indicators.vercel.app",
     wide: true,
