@@ -87,21 +87,21 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "PSX Indicators",
-    tag: "Market Intelligence Dashboard",
+    tag: "Market Intelligence Workspace",
     summary:
-      "Built a live, dynamic market intelligence dashboard for Pakistan Stock Exchange data, macro indicators, and sector insights. No more jumping between PSX DPS, World Bank, PBS, and a dozen other tabs to gather data for valuations, case comps, or university projects — everything is in one place.",
+      "Rebuilt from the ground up to kill tab-hunting. Markets, macro, a KSE-100 screener, live WACC + DCF models, watchlists and alerts now live on one screen — so you can start modelling instead of gathering data.",
     bullets: [
-      "All PSX indices — KSE-100, KSE-30, KMI-30 + Shariah & sector indices",
-      "50+ macro indicators — FX, interest rates, CPI, commodities, cement, fertilizer, auto sales",
-      "Sector pages (Oil & Gas, Banks, Cement, Pharma, Textiles & more) with DCF, DDM & CAPM modelling notes",
-      "CAPM-based WACC calculator for 14 sectors, with CSV export",
-      "Compare tool to overlay any two instruments on a time-series chart",
-      "Personal watchlist + detail drawers on every instrument",
+      "Markets — KSE-100, KMI-30, ALLSHR and sector indices with daily sparklines and 1D / 1W / MTD / YTD moves",
+      "Macro — 45 series across CPI, FX, rates, yield curve, commodities and remittances, each with an as-of date and one-click XLSX / CSV export",
+      "Companies — KSE-100 screener with P/E, market cap, free float, margins, EPS growth and latest quarter, plus a sectors guide",
+      "Models — transparent WACC feeder on live PIB 10Y and KIBOR 6M with editable assumptions, feeding a DCF (Gordon growth or exit multiple) that imports financials from XLSX, CSV or PDF",
+      "Watchlists & alerts — star any series, build custom lists, and get an email when a rule fires after the day's data lands",
+      "#K search — jump to any series, company or page without touching the mouse",
     ],
     metrics: [
-      { value: "50+", label: "Macro Indicators" },
-      { value: "14", label: "Sector WACC Models" },
-      { value: "10+", label: "Sectors Modeling Guide" },
+      { value: "45", label: "Macro Series" },
+      { value: "KSE-100", label: "Screener Coverage" },
+      { value: "1", label: "Unified Screen" },
     ],
     href: "https://psx-indicators.vercel.app",
     wide: true,
